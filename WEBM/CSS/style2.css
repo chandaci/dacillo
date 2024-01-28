@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Onest', sans-serif;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c6f2f2;
+    
+}
+
+.nav_content{
+    max-width: var(--primary-color);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    transition: .3s;
+}
+nav.logo a:hover{
+    color: var(--primary-color);
+}
+
+nav .checkbox{
+    display: none;
+}
+
+nav input{
+    display: none;
+}
+nav .checkbox i{
+    font-size: 2rem;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+ul{
+    display: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+ul li a:hover{
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #017792;
+}
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #a01c74;
+}
+.container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    
+}
+.container .contactInfo{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #017792;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px;  color: aqua (0,0,0,0.15);
+}
+
+.container .contactInfo h2{
+    color: #d2f3f3;
+    font-size: 24px;  
+    font-weight: 500;
+}
+
+
+.container .contactInfo ul{
+    position: relative;
+    margin: 20px 0;
+}
+
+.container .contactInfo ul.info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: center;
+}
+.container .contactForm{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #c6f2f2;
+}
+.container .contactForm h2{
+    font-size: 42px;
+    font-weight: 500;
+}
+.container .contactForm .formBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.container .contactForm .formBox .inputBox{
+    position: sticky;
+    margin-bottom: 20px;
+}
+.container .contactForm .formBox .inputBox.w50{
+    width: 47%;
+}
+.container .contactForm .formBox.w100{
+    width: 100%;
+    border-top: 2px solid #000000;
+    border-right:  2px solid #000000;
+    border-left:  2px solid #000000;
+}
+.container .contactForm .inputBox.w100{
+    width: 100%;
+}
+
+.container .contactForm .formBox .inputBox input,
+.container .contactForm .formBox .inputBox textarea{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    border-color: #000000;
+    outline-color: #df0034;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+}
+.container .contactForm .formBox .inputBox textarea{
+    height: 120px;
+}
+.container .contactForm .formBox .inputBox span{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 3px;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.container .contactForm .formBox .inputBox input:focus ~ span,
+.container .contactForm .formBox .inputBox input:valid ~ span,
+.container .contactForm .formBox .inputBox textarea:focus ~ span,
+.container .contactForm .formBox .inputBox textarea:valid ~ span{
+    transform: translateY(-30px);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.container .contactForm .formBox .inputBox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: #a01c74;
+    color: #f5f5f5;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+} 
+.container .contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: #f358d7;
+}
